@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f5f4;
+  color: #263632;
+}
+
+.topo {
+  background: #176b55;
+  color: white;
+  text-align: center;
+  padding: 28px 16px;
+}
+
+.topo h1 {
+  margin: 0 0 8px;
+}
+
+.topo p {
+  margin: 0;
+}
+
+.container {
+  max-width: 850px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+.card {
+  background: white;
+  margin-bottom: 20px;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px #0000000c;
+}
+
+h2 {
+  color: #176b55;
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 7px;
+  border: 1px solid #bdcbc6;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid #176b55;
+  outline-offset: 1px;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 20px;
+  background: #176b55;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #10513f;
+}
+
+.botao-secundario {
+  background: #596a65;
+}
+
+.resultado {
+  background: #edf7f2;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.mensagem {
+  color: #176b55;
+}
+
+.ajuda {
+  color: #586762;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.grafico {
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+
+#graficoIMC {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tabela-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #e0e8e4;
+}
+
+th {
+  color: #176b55;
+}
+
+.aviso {
+  background: #fff9e9;
+}
+
+.aviso h2 {
+  color: #765b18;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #586762;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+  }
+
+  .topo h1 {
+    font-size: 24px;
+  }
+}
+
+.tabela-imc {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.tabela-imc th,
+.tabela-imc td {
+  border: 1px solid #dce5e0;
+  padding: 10px;
+  text-align: left;
+}
+
+.tabela-imc th {
+  background: #176b55;
+  color: white;
+}
+
+.tabela-imc .faixa-atual {
+  background: #d9f2e4;
+  font-weight: bold;
+  outline: 2px solid #176b55;
+  outline-offset: -2px;
+}
+
+.resultado h3 {
+  color: #176b55;
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Aplicativo de Saúde</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topo">
+      <h1>Meu Aplicativo de Saúde</h1>
+      <p>Acompanhe seus dados e sua evolução</p>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>1. Cadastro</h2>
+        <form id="formCadastro">
+          <label for="nome">Nome</label>
+          <input
+            id="nome"
+            type="text"
+            maxlength="60"
+            placeholder="Digite seu nome"
+            required
+          />
+
+          <label for="idade">Idade (anos)</label>
+          <input
+            id="idade"
+            type="number"
+            min="1"
+            max="120"
+            placeholder="Ex.: 35"
+            required
+          />
+
+          <button type="submit">Salvar cadastro</button>
+        </form>
+        <p id="mensagemCadastro" class="mensagem" aria-live="polite"></p>
+      </section>
+
+      <section class="card">
+        <h2>2. Calcular IMC</h2>
+        <form id="formIMC">
+          <label for="peso">Peso (kg)</label>
+          <input
+            id="peso"
+            type="number"
+            min="1"
+            max="500"
+            step="0.1"
+            placeholder="Ex.: 80"
+            required
+          />
+
+          <label for="altura">Altura (cm)</label>
+          <input
+            id="altura"
+            type="number"
+            min="50"
+            max="250"
+            step="0.1"
+            placeholder="Ex.: 170"
+            required
+          />
+
+          <button type="submit">Calcular e salvar resultado</button>
+        </form>
+        <div id="resultado" class="resultado" aria-live="polite">
+          Preencha os campos para começar.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>3. Evolução do IMC</h2>
+        <p class="ajuda">
+          O gráfico aparece depois que você salvar resultados.
+        </p>
+        <div class="grafico">
+          <canvas
+            id="graficoIMC"
+            role="img"
+            aria-label="Gráfico da evolução do IMC"
+          ></canvas>
+        </div>
+        <p id="mensagemGrafico" class="ajuda"></p>
+      </section>
+
+      <section class="card">
+        <h2>4. Histórico</h2>
+        <div class="tabela-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Peso</th>
+                <th>IMC</th>
+              </tr>
+            </thead>
+            <tbody id="historico">
+              <tr>
+                <td colspan="3">Nenhum resultado salvo.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button type="button" id="limparHistorico" class="botao-secundario">
+          Apagar histórico
+        </button>
+      </section>
+
+      <section class="card aviso">
+        <h2>Importante</h2>
+        <p>
+          O IMC é uma medida de triagem e não faz diagnóstico. A faixa de peso
+          exibida é apenas uma referência para adultos a partir de 20 anos, não
+          uma meta individual.
+        </p>
+        <p>
+          Para menores de 20 anos, a interpretação depende da idade e do sexo e
+          deve usar referências específicas para crescimento.
+        </p>
+        <p>
+          Os dados ficam neste navegador. Eles não são enviados automaticamente
+          a um profissional de saúde.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Meu Aplicativo de Saúde • Projeto de aprendizagem</p>
+    </footer>
+  </body>
+</html>
